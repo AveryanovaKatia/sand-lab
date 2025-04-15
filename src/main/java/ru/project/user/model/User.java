@@ -1,4 +1,4 @@
-package ru.project.user;
+package ru.project.user.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -23,5 +23,9 @@ public class User {
     private String name;
 
     private String email;
+
+    private int age;
+
+    private Gender gender;
 
 }
