@@ -3,6 +3,7 @@ package ru.project.user.mapper;
 import org.springframework.stereotype.Component;
 import ru.project.user.dto.UserRequestDto;
 import ru.project.user.dto.UserResponseDto;
+import ru.project.user.dto.UserResponseLongDto;
 import ru.project.user.model.User;
 
 @Component
@@ -29,5 +30,18 @@ public class UserMapper {
         userResponseDto.setName(user.getName());
 
         return userResponseDto;
+    }
+
+    public static UserResponseLongDto toUserResponseLongDto(User user) {
+
+        final UserResponseLongDto userResponseLongDto = new UserResponseLongDto();
+
+        userResponseLongDto.setId(user.getId());
+        userResponseLongDto.setName(user.getName());
+        userResponseLongDto.setEmail(user.getEmail());
+        userResponseLongDto.setAge(user.getAge());
+        userResponseLongDto.setGender(user.getGender());
+
+        return userResponseLongDto;
     }
 }
