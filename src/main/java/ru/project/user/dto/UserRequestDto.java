@@ -27,4 +27,6 @@ public class UserRequestDto {
     @NotNull
     private Gender gender;
 
+    private String password;
+
 }
